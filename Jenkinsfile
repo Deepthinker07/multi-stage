@@ -1,5 +1,7 @@
 pipeline {
-    agent any 
+    agent {
+        label 'qa'
+    }
     tools {
         maven 'maven3'
     }
