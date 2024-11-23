@@ -63,8 +63,7 @@ pipeline {
         stage ('deploy to eks') {
             steps {
                 withKubeConfig(caCertificate: '', clusterName: 'singh-EKS', contextName: '', credentialsId: 'qa-token-k8', namespace: 'qa', restrictKubeConfigAccess: false, serverUrl: 'https://D0684F104A0902FC351413D1CAE89130.gr7.ap-southeast-1.eks.amazonaws.com') {
-                    sh 'cd /home/ubuntu/qa/workspace/bg-qa'
-                    sh 'kubectl apply -f deploy-svc.yml'
+                    sh 'kubectl apply -f deployment-service.yaml'
                     sleep 60
                 }
             }
