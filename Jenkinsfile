@@ -36,7 +36,7 @@ pipeline {
                 withSonarQubeEnv ('sonarserver') {
                     sh '''
                     $scanner/bin/sonar-scanner \
-                    -Dsonar.projectName=boardgame \
+                    -Dsonar.projectName=boardgame-prod \
                     -Dsonar.projectKey=boardgamekey \
                     -Dsonar.java.binaries=target/classes 
                     '''
