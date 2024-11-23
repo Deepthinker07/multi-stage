@@ -8,7 +8,7 @@ pipeline {
     environment {
         scanner = tool 'sonarscanner'
         userName = 'deepthinker07'
-        imgName = 'bgimg_qa'
+        imgName = 'bgimg_summa'
     }
     stages {
         stage ('cleanWs') {
