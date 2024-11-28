@@ -1,3 +1,4 @@
+@Library{'singh'} _
 pipeline {
     agent any
     tools {
