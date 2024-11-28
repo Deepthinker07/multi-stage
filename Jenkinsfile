@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'qa'
-    }
+    agent any
     tools {
         maven 'maven3'
     }
@@ -23,12 +21,12 @@ pipeline {
         }    
         stage ('compile') {
             steps {
-                sh 'mvn compile'
+                compile.groovy()
                     } 
                 }      
         stage ('unit test') {
             steps {
-                sh 'mvn test'
+                unittest.groovy()
                     }
                 } 
         stage ('static code analysis') {
